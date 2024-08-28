@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26px;
+    font-family: "Baskervville SC", serif;
+}
+.header img{
+    width: 94px;
+}
+.header h1{
+    margin-left: 10px;
+    color: white;
+}
