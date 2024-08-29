@@ -30,20 +30,52 @@ export default function Result({ point, dispatch, total }) {
   return (
     <div className="mainresult">
       <div className="score-container">
-        <div className="score-bar" style={{ width: `${percentage}%`, backgroundColor: getBarColor(percentage) }}>
+        <div
+          className="score-bar"
+          style={{
+            width: `${percentage}%`,
+            backgroundColor: getBarColor(percentage),
+          }}
+        >
           {percentage.toFixed(2)}%
         </div>
       </div>
       <div className="score-details">
-        <p>Total Questions: {total}</p>
-        <p>Correct Answers: {point}</p>
-        <p>Score: {percentage.toFixed(2)}%</p>
-        <p>Feedback: {feedback}</p>
-        <p>{feedbackDetails}</p>
+        <p className="highscore">
+          The hign Score is <strong>{localStorage.getItem("highscore")}</strong>
+        </p>
+        <p className="highscore">
+          Total Questions: <strong>{total}</strong>
+        </p>
+        <p className="highscore">
+          Correct Answers: <strong> {point}</strong>
+        </p>
+        <p className="highscore">
+          Wrong Answers: <strong> {total - point}</strong>
+        </p>
+        <p className="highscore">
+          Score: <strong> {percentage.toFixed(2)}%</strong>
+        </p>
+        <p className="highscore">
+          Feedback: <strong> {feedback}</strong>
+        </p>
+        <p className="highscore">
+          <strong>{feedbackDetails}</strong>
+        </p>
       </div>
       <div className="actions">
-        <button className='resultbtn' onClick={() => dispatch({ type: 'start' })}>Retry</button>
-        <button className='resultbtn review' onClick={() => dispatch({ type: 'review' })}>Review Answers</button>
+        <button
+          className="resultbtn"
+          onClick={() => dispatch({ type: "start" })}
+        >
+          Retry
+        </button>
+        <button
+          className="resultbtn review"
+          onClick={() => dispatch({ type: "review" })}
+        >
+          Review Answers
+        </button>
       </div>
     </div>
   );

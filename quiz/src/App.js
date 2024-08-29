@@ -6,6 +6,7 @@ import quizzes from "./quizdata";
 import Question from "./component/question";
 import Result from "./component/result";
 import Review from "./component/review";
+import Navigation from "./component/navigationbar";
 function reducer(state, action) {
   switch (action.type) {
     case "startquiz":
@@ -32,6 +33,9 @@ function reducer(state, action) {
       };
     case "next":
       if (state.question.length - 1 === state.index) {
+        if (Number(localStorage.getItem("highscore"))<state.point) {
+          localStorage.setItem("highscore",state.point)
+        }
         return { ...state, status: "result", index: 0 };
       }
       return { ...state, answer: null, index: state.index + 1 };
@@ -58,11 +62,14 @@ function App() {
       <Header />
       {status === "ready" && <Starter dispatch={dispatch} />}
       {status === "active" && (
+        <> 
+        <Navigation index={index} total={question.length}/>
         <Question
           question={question[index]}
           answer={answer}
           dispatch={dispatch}
         />
+        </>
       )}
       {status === "result" && (
         <Result dispatch={dispatch} point={point} total={question.length} />

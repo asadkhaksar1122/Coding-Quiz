@@ -20,7 +20,7 @@ export default function Review({ question,dispatch }) {
         </div>
       ))}
       <div className="reviewbtn">
-        <button className='resultbtn' onClick={()=>dispatch({type:'start'})} >Try</button>
+        <button className='resultbtn' onClick={()=>dispatch({type:'start'})} >retry</button>
       </div>
     </div>
   );
