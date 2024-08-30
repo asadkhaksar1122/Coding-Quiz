@@ -1352,10 +1352,340 @@ const expressQuestions = [
   }
 ];
 
+const mongoDBQuestions = [
+  {
+    question: "What is MongoDB?",
+    options: ["A NoSQL database", "A relational database", "A programming language", "A web framework"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "Which data format does MongoDB use to store data?",
+    options: ["JSON-like BSON format", "XML", "CSV", "Plain text"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What is a collection in MongoDB?",
+    options: ["A group of documents", "A single document", "A database", "A query"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "How do you insert a document into a MongoDB collection?",
+    options: ["db.collection.insert()", "db.collection.add()", "db.collection.create()", "db.collection.push()"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "Which command is used to start the MongoDB server?",
+    options: ["mongod", "mongo", "start-mongo", "mongodb"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What is the purpose of the MongoDB shell?",
+    options: ["To interact with the MongoDB database", "To create web applications", "To manage server configurations", "To write scripts"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "How do you retrieve documents from a MongoDB collection?",
+    options: ["db.collection.find()", "db.collection.get()", "db.collection.retrieve()", "db.collection.select()"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What is an index in MongoDB?",
+    options: ["A data structure that improves query performance", "A document in a collection", "A type of database", "A user role"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "How do you update a document in MongoDB?",
+    options: ["db.collection.update()", "db.collection.modify()", "db.collection.change()", "db.collection.edit()"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What does the 'findOne()' method do in MongoDB?",
+    options: ["Retrieves a single document from a collection", "Retrieves all documents", "Deletes a document", "Updates a document"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What is the purpose of the 'ObjectId' in MongoDB?",
+    options: ["To uniquely identify documents", "To define collections", "To create indexes", "To represent data types"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "How do you delete a document in MongoDB?",
+    options: ["db.collection.deleteOne()", "db.collection.remove()", "db.collection.delete()", "db.collection.drop()"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "Which command is used to create a new database in MongoDB?",
+    options: ["use databaseName", "create databaseName", "db.createDatabase()", "new databaseName"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What is a replica set in MongoDB?",
+    options: ["A group of MongoDB servers that maintain the same data", "A single MongoDB server", "A collection of databases", "A type of document"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "How do you aggregate data in MongoDB?",
+    options: ["Using the aggregate() method", "Using the group() method", "Using the collect() method", "Using the sum() method"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What is the purpose of the 'mongoose' library?",
+    options: ["To provide a schema-based solution for MongoDB in Node.js", "To create databases", "To manage user authentication", "To handle routing"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "How do you connect to a MongoDB database using Mongoose?",
+    options: ["mongoose.connect('mongodb://localhost/databaseName')", "mongoose.connect('databaseName')", "mongoose.connect('localhost/databaseName')", "mongoose.connect('mongodb://databaseName')"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What is the purpose of the 'schema' in Mongoose?",
+    options: ["To define the structure of documents", "To create collections", "To manage connections", "To handle queries"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "How do you define a model in Mongoose?",
+    options: ["mongoose.model('ModelName', schema)", "mongoose.createModel('ModelName', schema)", "mongoose.defineModel('ModelName', schema)", "mongoose.newModel('ModelName', schema)"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What is the purpose of the 'populate()' method in Mongoose?",
+    options: ["To replace the specified paths in the document with documents from other collections", "To aggregate data", "To update documents", "To delete documents"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "How do you handle validation in Mongoose?",
+    options: ["By defining validation rules in the schema", "By using the validate() method", "By using the check() method", "By using try-catch blocks"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What does the 'lean()' method do in Mongoose?",
+    options: ["Returns plain JavaScript objects instead of Mongoose documents", "Updates documents", "Deletes documents", "Populates references"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "How do you implement transactions in MongoDB?",
+    options: ["Using sessions with the startSession() method", "Using the transaction() method", "Using the beginTransaction() method", "MongoDB does not support transactions"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What is the purpose of the 'findById()' method in Mongoose?",
+    options: ["To find a document by its ObjectId", "To find all documents", "To update a document", "To delete a document"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "How do you create an index in MongoDB?",
+    options: ["db.collection.createIndex()", "db.collection.addIndex()", "db.collection.index()", "db.collection.create()"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "What is the purpose of the 'explain()' method in MongoDB?",
+    options: ["To provide information about how a query is executed", "To delete documents", "To update documents", "To create indexes"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  },
+  {
+    question: "How do you perform a text search in MongoDB?",
+    options: ["Using the $text operator", "Using the text() method", "Using the search() method", "Using the find() method"],
+    correctOptionIndex: 0,
+    category: "MongoDB"
+  }
+];
+
+const mysqlQuestions = [
+  {
+    question: "What is MySQL?",
+    options: ["An open-source relational database management system", "A programming language", "A web server", "A front-end framework"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "Which command is used to create a new database in MySQL?",
+    options: ["CREATE DATABASE database_name;", "NEW DATABASE database_name;", "MAKE DATABASE database_name;", "DATABASE CREATE database_name;"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What is the purpose of the 'SELECT' statement in MySQL?",
+    options: ["To retrieve data from a database", "To insert data into a database", "To update existing data", "To delete data from a database"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "How do you insert data into a table in MySQL?",
+    options: ["INSERT INTO table_name VALUES (value1, value2, ...);", "ADD INTO table_name (value1, value2, ...);", "INSERT DATA INTO table_name;", "PUT INTO table_name VALUES (value1, value2, ...);"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "Which command is used to delete data from a table in MySQL?",
+    options: ["DELETE FROM table_name WHERE condition;", "REMOVE FROM table_name;", "DROP table_name WHERE condition;", "CLEAR table_name;"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What is a primary key in MySQL?",
+    options: ["A unique identifier for a record in a table", "A foreign key", "A type of index", "A column that can store NULL values"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "How do you update existing records in a MySQL table?",
+    options: ["UPDATE table_name SET column1 = value1 WHERE condition;", "MODIFY table_name SET column1 = value1;", "CHANGE table_name SET column1 = value1;", "ALTER table_name SET column1 = value1;"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What does the 'JOIN' clause do in MySQL?",
+    options: ["Combines rows from two or more tables based on a related column", "Deletes rows from a table", "Updates rows in a table", "Creates a new table"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "Which type of JOIN returns all records from the left table and matched records from the right table?",
+    options: ["LEFT JOIN", "RIGHT JOIN", "INNER JOIN", "FULL JOIN"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What is the purpose of the 'GROUP BY' clause in MySQL?",
+    options: ["To group rows that have the same values in specified columns", "To filter records", "To sort records", "To join tables"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "How do you create a new table in MySQL?",
+    options: ["CREATE TABLE table_name (column1 datatype, column2 datatype, ...);", "NEW TABLE table_name (column1 datatype, column2 datatype, ...);", "MAKE TABLE table_name;", "TABLE CREATE table_name (column1 datatype, column2 datatype, ...);"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What is a foreign key in MySQL?",
+    options: ["A key used to link two tables together", "A unique identifier for a record", "A type of index", "A column that can store NULL values"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "Which command is used to retrieve all records from a table in MySQL?",
+    options: ["SELECT * FROM table_name;", "GET ALL FROM table_name;", "RETRIEVE FROM table_name;", "SHOW table_name;"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What does the 'DISTINCT' keyword do in MySQL?",
+    options: ["Removes duplicate values from the result set", "Sorts the result set", "Filters records", "Groups records"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "How do you sort the result set in MySQL?",
+    options: ["ORDER BY column_name;", "SORT BY column_name;", "ARRANGE BY column_name;", "GROUP BY column_name;"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What is the purpose of the 'HAVING' clause in MySQL?",
+    options: ["To filter records after grouping", "To filter records before grouping", "To sort records", "To join tables"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "Which function is used to count the number of rows in MySQL?",
+    options: ["COUNT()", "SUM()", "TOTAL()", "NUM()"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "How do you create an index on a column in MySQL?",
+    options: ["CREATE INDEX index_name ON table_name (column_name);", "NEW INDEX index_name ON table_name (column_name);", "ADD INDEX index_name ON table_name (column_name);", "INDEX CREATE index_name ON table_name (column_name);"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What is the purpose of the 'LIMIT' clause in MySQL?",
+    options: ["To specify the maximum number of records to return", "To filter records", "To sort records", "To group records"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "How do you drop a table in MySQL?",
+    options: ["DROP TABLE table_name;", "REMOVE TABLE table_name;", "DELETE TABLE table_name;", "CLEAR TABLE table_name;"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What is a transaction in MySQL?",
+    options: ["A sequence of operations performed as a single logical unit", "A single SQL statement", "A type of query", "A database connection"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "How do you start a transaction in MySQL?",
+    options: ["START TRANSACTION;", "BEGIN;", "NEW TRANSACTION;", "OPEN TRANSACTION;"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What does the 'COMMIT' statement do in MySQL?",
+    options: ["Saves all changes made during the transaction", "Rolls back the transaction", "Ends the session", "Starts a new transaction"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "How do you roll back a transaction in MySQL?",
+    options: ["ROLLBACK;", "REVERT;", "UNDO;", "CANCEL;"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What is the purpose of the 'AUTO_INCREMENT' attribute in MySQL?",
+    options: ["To automatically generate a unique value for a column", "To create a foreign key", "To define a primary key", "To set a default value"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "How do you change a column's data type in MySQL?",
+    options: ["ALTER TABLE table_name MODIFY column_name new_datatype;", "CHANGE TABLE table_name CHANGE column_name new_datatype;", "MODIFY TABLE table_name CHANGE column_name new_datatype;", "ALTER TABLE table_name CHANGE column_name new_datatype;"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  },
+  {
+    question: "What is the purpose of the 'UNION' operator in MySQL?",
+    options: ["To combine the result sets of two or more SELECT statements", "To filter records", "To sort records", "To group records"],
+    correctOptionIndex: 0,
+    category: "MySQL"
+  }
+];
 
 
 
-const quizzes=[...JavaScriptquestion,...expressQuestions,...djangoQuestions,...htmlQuestions,...cssQuestions,...flaskQuestions,...pythonQuestions,...reactQuestions]
+
+const quizzes=[...JavaScriptquestion,...mysqlQuestions,...mongoDBQuestions,...expressQuestions,...djangoQuestions,...htmlQuestions,...cssQuestions,...flaskQuestions,...pythonQuestions,...reactQuestions]
 
 
 function shuffle(array) {

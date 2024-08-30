@@ -51,6 +51,8 @@ export default function Starter({dispatch}) {
             <option value="HTML">HTML</option>
             <option value="Django">Django</option>
             <option value="Express">Express</option>
+            <option value="MongoDB">MongoDB</option>
+            <option value="MySQL">MySQl</option>
           </select>
         </div>
         <button onClick={() => dispatch({ type: "startquiz" })}>
