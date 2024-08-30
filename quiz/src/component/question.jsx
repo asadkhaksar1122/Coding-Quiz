@@ -3,9 +3,9 @@ import './question.css'
 export default function Question({question,dispatch,answer}) {
     let wrongaudio = new Audio("buzzer-or-wrong-answer-20582.mp3");
     console.log(question)
-    if (answer && answer!=question.correctOptionIndex){
-        wrongaudio.play()  
-    }
+    // if (answer && answer!=question.correctOptionIndex){
+    //     wrongaudio.play()  
+    // }
   return (
     <div className="maincontainer">
       <div className="question">{question.question}</div>

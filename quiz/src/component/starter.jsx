@@ -53,6 +53,7 @@ export default function Starter({dispatch}) {
             <option value="Express">Express</option>
             <option value="MongoDB">MongoDB</option>
             <option value="MySQL">MySQl</option>
+            <option value="Java">Java</option>
           </select>
         </div>
         <button onClick={() => dispatch({ type: "startquiz" })}>

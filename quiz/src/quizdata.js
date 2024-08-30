@@ -1,4 +1,4 @@
-const JavaScriptquestion = [
+let JavaScriptquestion = [
   {
     question: "What is a JavaScript 'arrow function' also known as?",
     options: ["Lambda function", "Fat arrow function", "Slim function", "Skinny function"],
@@ -37,7 +37,7 @@ const JavaScriptquestion = [
   },
   {
     question: "What is the purpose of the 'let' keyword in JavaScript?",
-    options: ["To declare a variable that is block-scoped", "To declare a constant variable", "To declare a variable that is function-scoped", "To declare a global variable"],
+    options: ["To declare a variable that is block-scoped", "To declare a letant variable", "To declare a variable that is function-scoped", "To declare a global variable"],
     correctOptionIndex: 0,
     category: "JavaScript"
   },
@@ -108,8 +108,8 @@ const JavaScriptquestion = [
     category: "JavaScript"
   },
   {
-    question: "Which of the following keywords is used to define a constant in JavaScript?",
-    options: ["const", "let", "var", "constant"],
+    question: "Which of the following keywords is used to define a letant in JavaScript?",
+    options: ["let", "let", "var", "letant"],
     correctOptionIndex: 0,
     category: "JavaScript"
   },
@@ -145,7 +145,7 @@ const JavaScriptquestion = [
   },
   {
     question: "Which of the following is true about promises in JavaScript?",
-    options: ["They are used for handling asynchronous operations", "They can only be resolved, not rejected", "They are synchronous by nature", "They can only be created using the 'Promise' constructor"],
+    options: ["They are used for handling asynchronous operations", "They can only be resolved, not rejected", "They are synchronous by nature", "They can only be created using the 'Promise' letructor"],
     correctOptionIndex: 0,
     category: "JavaScript"
   },
@@ -156,7 +156,7 @@ const JavaScriptquestion = [
     category: "JavaScript"
   }
 ];
-const pythonQuestions = [
+let pythonQuestions = [
   {
     question: "What is the output of the following code: print(type([]))?",
     options: ["<class 'list'>", "<class 'dict'>", "<class 'tuple'>", "<class 'set'>"],
@@ -333,7 +333,7 @@ const pythonQuestions = [
   }
 ];
 
-const reactQuestions = [
+let reactQuestions = [
   {
     question: "What is React primarily used for?",
     options: ["Building user interfaces", "Server-side scripting", "Database management", "Network programming"],
@@ -498,7 +498,7 @@ const reactQuestions = [
   }
 ];
 
-const flaskQuestions = [
+let flaskQuestions = [
   {
     question: "What is Flask?",
     options: ["A web framework for Python", "A database management system", "A front-end library", "A JavaScript framework"],
@@ -662,7 +662,7 @@ const flaskQuestions = [
     category: "Flask"
   }
 ];
-const cssQuestions = [
+let cssQuestions = [
   {
     question: "What does CSS stand for?",
     options: ["Cascading Style Sheets", "Creative Style System", "Colorful Style Sheets", "Computer Style Sheets"],
@@ -839,7 +839,7 @@ const cssQuestions = [
   }
 ];
 
-const htmlQuestions = [
+let htmlQuestions = [
   {
     question: "What does HTML stand for?",
     options: ["HyperText Markup Language", "HighText Machine Language", "HyperText Markup Level", "None of the above"],
@@ -1021,7 +1021,7 @@ const htmlQuestions = [
     category: "HTML"
   }
 ];
-const djangoQuestions = [
+let djangoQuestions = [
   {
     question: "What is Django?",
     options: ["A web framework for Python", "A database management system", "A front-end library", "A JavaScript framework"],
@@ -1187,7 +1187,7 @@ const djangoQuestions = [
 ];
 
 
-const expressQuestions = [
+let expressQuestions = [
   {
     question: "What is Express.js?",
     options: ["A web application framework for Node.js", "A database management system", "A front-end library", "A programming language"],
@@ -1352,7 +1352,7 @@ const expressQuestions = [
   }
 ];
 
-const mongoDBQuestions = [
+let mongoDBQuestions = [
   {
     question: "What is MongoDB?",
     options: ["A NoSQL database", "A relational database", "A programming language", "A web framework"],
@@ -1517,7 +1517,7 @@ const mongoDBQuestions = [
   }
 ];
 
-const mysqlQuestions = [
+let mysqlQuestions = [
   {
     question: "What is MySQL?",
     options: ["An open-source relational database management system", "A programming language", "A web server", "A front-end framework"],
@@ -1682,18 +1682,442 @@ const mysqlQuestions = [
   }
 ];
 
+let javaQuestions = [
+  {
+    question: "What is Java?",
+    options: [
+      "A high-level programming language",
+      "A type of coffee",
+      "A web framework",
+      "An operating system",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "Which of the following is a feature of Java?",
+    options: [
+      "Platform independence",
+      "Low-level programming",
+      "Pointer arithmetic",
+      "Multiple inheritance",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "What does JVM stand for?",
+    options: [
+      "Java Virtual Machine",
+      "Java Variable Method",
+      "Java Visual Machine",
+      "Java Version Manager",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "What is the main entry point of a Java application?",
+    options: [
+      "public static void main(String[] args)",
+      "void main(String args)",
+      "main(String[] args)",
+      "static void main(String args[])",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "Which keyword is used to create a class in Java?",
+    options: ["class", "create", "define", "new"],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "What is inheritance in Java?",
+    options: [
+      "A mechanism to create a new class based on an existing class",
+      "A way to hide data",
+      "A method to overload functions",
+      "A way to handle exceptions",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "Which of the following is used to handle exceptions in Java?",
+    options: ["try-catch", "if-else", "switch-case", "for-loop"],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "What is the purpose of the 'final' keyword in Java?",
+    options: [
+      "To declare constants",
+      "To create abstract classes",
+      "To prevent method overriding",
+      "All of the above",
+    ],
+    correctOptionIndex: 3,
+    category: "Java",
+  },
+  {
+    question:
+      "Which collection class is used to store key-value pairs in Java?",
+    options: ["HashMap", "ArrayList", "LinkedList", "TreeSet"],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "What does the 'static' keyword mean in Java?",
+    options: [
+      "Belongs to the class rather than instances",
+      "Can be accessed without creating an object",
+      "Both a and b",
+      "None of the above",
+    ],
+    correctOptionIndex: 2,
+    category: "Java",
+  },
+  {
+    question: "What is polymorphism in Java?",
+    options: [
+      "Ability to perform a single action in different ways",
+      "Ability to hide data",
+      "Ability to create multiple classes",
+      "Ability to throw exceptions",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question:
+      "Which of the following is a valid declaration of a boolean variable in Java?",
+    options: [
+      "boolean flag = true;",
+      "bool flag = true;",
+      "boolean flag = 1;",
+      "boolean flag = 'true';",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "What is the purpose of the 'this' keyword in Java?",
+    options: [
+      "Refers to the current object",
+      "Creates a new object",
+      "Refers to the superclass",
+      "None of the above",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "Which of the following is not a primitive data type in Java?",
+    options: ["String", "int", "char", "boolean"],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "What is an interface in Java?",
+    options: [
+      "A reference type similar to a class",
+      "A class that cannot be instantiated",
+      "A type of exception",
+      "A method of data hiding",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "How do you create a thread in Java?",
+    options: [
+      "By implementing the Runnable interface",
+      "By extending the Thread class",
+      "Both a and b",
+      "None of the above",
+    ],
+    correctOptionIndex: 2,
+    category: "Java",
+  },
+  {
+    question: "What is the use of the 'super' keyword in Java?",
+    options: [
+      "To refer to the superclass",
+      "To call a superclass constructor",
+      "Both a and b",
+      "None of the above",
+    ],
+    correctOptionIndex: 2,
+    category: "Java",
+  },
+  {
+    question: "Which method is called when an object is created in Java?",
+    options: ["Constructor", "Initializer", "Main method", "Destructor"],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "What is the purpose of the 'abstract' keyword in Java?",
+    options: [
+      "To declare a class that cannot be instantiated",
+      "To declare a method without an implementation",
+      "Both a and b",
+      "None of the above",
+    ],
+    correctOptionIndex: 2,
+    category: "Java",
+  },
+  {
+    question: "What is the default value of a local variable in Java?",
+    options: ["Undefined", "0", "null", "false"],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question:
+      "Which of the following statements is true about constructors in Java?",
+    options: [
+      "Constructors can have a return type",
+      "Constructors can be overloaded",
+      "Constructors cannot be private",
+      "None of the above",
+    ],
+    correctOptionIndex: 1,
+    category: "Java",
+  },
+  {
+    question: "What is the purpose of the 'volatile' keyword in Java?",
+    options: [
+      "To indicate that a variable's value will be modified by different threads",
+      "To prevent method overriding",
+      "To declare constants",
+      "None of the above",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "How do you declare an array in Java?",
+    options: ["int[] arr;", "int arr[];", "Both a and b", "None of the above"],
+    correctOptionIndex: 2,
+    category: "Java",
+  },
+  {
+    question: "What is the purpose of the 'synchronized' keyword in Java?",
+    options: [
+      "To control access to a method or block by multiple threads",
+      "To declare constants",
+      "To define a class",
+      "None of the above",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question:
+      "Which of the following is a valid way to declare a constant in Java?",
+    options: [
+      "final int CONSTANT = 10;",
+      "const int CONSTANT = 10;",
+      "int CONSTANT = 10;",
+      "constant int CONSTANT = 10;",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "What is the purpose of the 'instanceof' operator in Java?",
+    options: [
+      "To check if an object is an instance of a specific class",
+      "To create a new instance",
+      "To cast an object",
+      "None of the above",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "How do you read input from the console in Java?",
+    options: [
+      "Using Scanner class",
+      "Using BufferedReader class",
+      "Using Console class",
+      "All of the above",
+    ],
+    correctOptionIndex: 3,
+    category: "Java",
+  },
+  {
+    question: "What is the purpose of the 'break' statement in Java?",
+    options: [
+      "To exit a loop or switch statement",
+      "To pause execution",
+      "To skip an iteration",
+      "To terminate the program",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question:
+      "Which of the following is a valid way to create a String in Java?",
+    options: [
+      "String str = 'Hello';",
+      "String str = new String('Hello');",
+      "Both a and b",
+      "None of the above",
+    ],
+    correctOptionIndex: 2,
+    category: "Java",
+  },
+  {
+    question: "What is the purpose of the 'StringBuilder' class in Java?",
+    options: [
+      "To create mutable strings",
+      "To create immutable strings",
+      "To compare strings",
+      "To convert strings",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "What is the purpose of the 'hashCode()' method in Java?",
+    options: [
+      "To return a hash code value for the object",
+      "To compare two objects",
+      "To convert an object to a string",
+      "To clone an object",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "How do you sort an array in Java?",
+    options: [
+      "Using Arrays.sort()",
+      "Using Collections.sort()",
+      "Using sort() method",
+      "None of the above",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question:
+      "What is the purpose of the 'default' keyword in an interface in Java?",
+    options: [
+      "To provide a default implementation for a method",
+      "To declare constants",
+      "To create abstract methods",
+      "None of the above",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "What does the 'super()' call do in a constructor?",
+    options: [
+      "Calls the constructor of the superclass",
+      "Calls the current class constructor",
+      "Creates a new object",
+      "None of the above",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "Which of the following is a valid comment in Java?",
+    options: [
+      "// This is a comment",
+      "/* This is a comment */",
+      "// This is a comment /*",
+      "Both a and b",
+    ],
+    correctOptionIndex: 3,
+    category: "Java",
+  },
+  {
+    question: "What is the purpose of the 'enum' keyword in Java?",
+    options: [
+      "To define a set of named constants",
+      "To create a class",
+      "To declare methods",
+      "None of the above",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question:
+      "What is the output of the following code: System.out.println(5 + 5 + '5');?",
+    options: ["55", "10", "105", "Error"],
+    correctOptionIndex: 2,
+    category: "Java",
+  },
+  {
+    question: "What is the purpose of the 'assert' keyword in Java?",
+    options: [
+      "To make an assertion",
+      "To declare constants",
+      "To handle exceptions",
+      "None of the above",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question: "How do you create a package in Java?",
+    options: [
+      "Using the package keyword",
+      "Using the import keyword",
+      "Using the create keyword",
+      "None of the above",
+    ],
+    correctOptionIndex: 0,
+    category: "Java",
+  },
+  {
+    question:
+      "Which of the following is a valid way to declare an array of integers in Java?",
+    options: ["int[] arr;", "int arr[];", "Both a and b", "None of the above"],
+    correctOptionIndex: 2,
+    category: "Java",
+  },
+];
+function shuffleQuestions(questions) {
+  questions.forEach((question) => {
+    // Shuffle options
+    let options = question.options;
+    let correctAnswer = options[question.correctOptionIndex];
 
+    // Shuffle the options array
+    for (let i = options.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [options[i], options[j]] = [options[j], options[i]];
+    }
 
-
-const quizzes=[...JavaScriptquestion,...mysqlQuestions,...mongoDBQuestions,...expressQuestions,...djangoQuestions,...htmlQuestions,...cssQuestions,...flaskQuestions,...pythonQuestions,...reactQuestions]
-
-
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
+    // Update correctOptionIndex
+    question.correctOptionIndex = options.indexOf(correctAnswer);
+  
+  });
 }
+shuffleQuestions(JavaScriptquestion);
+shuffleQuestions(pythonQuestions);
+shuffleQuestions(djangoQuestions);
+shuffleQuestions(reactQuestions);
+shuffleQuestions(flaskQuestions);
+shuffleQuestions(htmlQuestions);
+shuffleQuestions(expressQuestions);
+shuffleQuestions(cssQuestions);
+shuffleQuestions(mongoDBQuestions);
+shuffleQuestions(mysqlQuestions);
+shuffleQuestions(javaQuestions)
+let quizzes=[...JavaScriptquestion,...javaQuestions,...mysqlQuestions,...mongoDBQuestions,...expressQuestions,...djangoQuestions,...htmlQuestions,...cssQuestions,...flaskQuestions,...pythonQuestions,...reactQuestions]
 
-export default shuffle(quizzes);
+
+
+
+export default quizzes;
