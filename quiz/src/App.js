@@ -9,8 +9,11 @@ import Review from "./component/review";
 import Navigation from "./component/navigationbar";
 function reducer(state, action) {
   switch (action.type) {
+    case "categry":
+      const allquestion=quizzes.filter((q)=>q.category==action.payload)
+      return { ...state, categry: action.payload,question:allquestion };
     case "startquiz":
-      return { ...state, status: "active" };
+      return { ...state, status: "active", };
     case "review":
       return { ...state, status: "review" };
     case "start":
@@ -45,12 +48,14 @@ function reducer(state, action) {
   }
 }
 function App() {
+  let allquestion = quizzes.filter((q) => q.category == "JavaScript");
   let initialState = {
     status: "ready",
-    question: quizzes,
+    question: allquestion,
     index: 0,
     answer: null,
     point: 0,
+    categry:"JavaScript"
   };
   let [{ status, question, index, answer, point }, dispatch] = useReducer(
     reducer,

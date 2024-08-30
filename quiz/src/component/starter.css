@@ -27,7 +27,29 @@
     background-color: #5E5E5E;
     color: white;
 }
+.categry {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 100%;
+  max-width: 300px; /* Adjust the max-width as needed */
+  margin-bottom: 23px;
 
+}
+
+.categry:focus {
+  outline: none;
+  border-color: #007bff; /* Change the border color on focus */
+}
+
+/* Make the select element responsive */
+@media only screen and (max-width: 600px) {
+  .categry {
+    max-width: 100%; /* Adjust for smaller screens */
+  }
+}
 /* Responsive design */
 @media only screen and (max-width: 450px) {
 .starter{

@@ -1,385 +1,1363 @@
-const quizzes = [
+const JavaScriptquestion = [
   {
-    question: "Which of the following is a JavaScript data type?",
-    options: ["String", "Integer", "Float", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "What does HTML stand for?",
-    options: [
-      "Hyper Text Markup Language",
-      "High Text Markup Language",
-      "Hyperlink and Text Markup Language",
-      "Hyper Textual Markup Language",
-    ],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which company developed the Java programming language?",
-    options: ["Microsoft", "Sun Microsystems", "IBM", "Oracle"],
+    question: "What is a JavaScript 'arrow function' also known as?",
+    options: ["Lambda function", "Fat arrow function", "Slim function", "Skinny function"],
     correctOptionIndex: 1,
+    category: "JavaScript"
   },
   {
-    question: "What is the purpose of the 'this' keyword in JavaScript?",
-    options: [
-      "To refer to the global object",
-      "To refer to the current object",
-      "To create a new object",
-      "To access the parent object",
-    ],
+    question: "What does the 'DOM' stand for in web development?",
+    options: ["Document Object Model", "Data Object Model", "Design Object Model", "Digital Object Model"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  },
+  {
+    question: "What is the result of 10 + '20' in JavaScript?",
+    options: ["30", "1020", "Error", "102"],
     correctOptionIndex: 1,
+    category: "JavaScript"
   },
   {
-    question: "What symbol is used for comments in JavaScript?",
-    options: ["//", "#", "/*", "<!--"],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a front-end JavaScript framework?",
-    options: ["Django", "Flask", "React", "Spring"],
-    correctOptionIndex: 2,
-  },
-  {
-    question: "What is the output of 2 + '2' in JavaScript?",
-    options: ["4", "22", "NaN", "undefined"],
+    question: "What does the 'typeof' operator in JavaScript return for an array?",
+    options: ["'array'", "'object'", "'array'", "'undefined'"],
     correctOptionIndex: 1,
+    category: "JavaScript"
   },
   {
-    question: "Which HTML attribute is used to specify inline styles?",
-    options: ["style", "font", "class", "styles"],
+    question: "What is the purpose of 'useEffect' hook in React?",
+    options: ["To perform side effects in function components", "To create state variables", "To handle form submissions", "To fetch data from an API"],
     correctOptionIndex: 0,
+    category: "JavaScript"
   },
   {
-    question: "What does CSS stand for?",
-    options: [
-      "Cascading Style Sheets",
-      "Colorful Style Sheets",
-      "Creative Style Sheets",
-      "Computer Style Sheets",
-    ],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a back-end programming language?",
-    options: ["HTML", "JavaScript", "Python", "CSS"],
-    correctOptionIndex: 2,
-  },
-  {
-    question: "What is the correct way to declare a variable in JavaScript?",
-    options: [
-      "var x = 5;",
-      "variable x = 5;",
-      "let x = 5;",
-      "Both var x = 5; and let x = 5;",
-    ],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "Which of the following is not a programming language?",
-    options: ["Python", "Java", "HTML", "C++"],
-    correctOptionIndex: 2,
-  },
-  {
-    question: "What does API stand for?",
-    options: [
-      "Application Programming Interface",
-      "Application Program Interface",
-      "Application Programming Interference",
-      "Application Program Interference",
-    ],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a NoSQL database?",
-    options: ["MySQL", "PostgreSQL", "MongoDB", "SQLite"],
-    correctOptionIndex: 2,
-  },
-  {
-    question: "Which of the following is a version control system?",
-    options: ["Git", "HTML", "CSS", "JavaScript"],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "What is the main language used for Android app development?",
-    options: ["Swift", "Kotlin", "JavaScript", "Python"],
+    question: "What is the difference between '==' and '===' operators in JavaScript?",
+    options: ["'==' compares value and type, '===' compares only value", "'==' compares only value, '===' compares value and type", "'==' is for assignment, '===' is for comparison", "'==' is strict comparison, '===' is loose comparison"],
     correctOptionIndex: 1,
-  },
-  {
-    question: "Which company developed the C programming language?",
-    options: ["Microsoft", "Bell Labs", "IBM", "Sun Microsystems"],
-    correctOptionIndex: 1,
-  },
-  {
-    question: "What does SQL stand for?",
-    options: [
-      "Structured Query Language",
-      "Simple Query Language",
-      "Structured Question Language",
-      "Simple Question Language",
-    ],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a CSS framework?",
-    options: ["React", "Angular", "Bootstrap", "Vue"],
-    correctOptionIndex: 2,
-  },
-  {
-    question: "What is the default port for HTTP?",
-    options: ["80", "443", "21", "22"],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a JavaScript runtime?",
-    options: ["Node.js", "Django", "Flask", "Spring"],
-    correctOptionIndex: 0,
-  },
-  {
-    question:
-      "What is the purpose of the 'use strict' directive in JavaScript?",
-    options: [
-      "To enable strict mode",
-      "To disable strict mode",
-      "To enable debugging",
-      "To disable debugging",
-    ],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a relational database?",
-    options: ["MongoDB", "Redis", "MySQL", "Cassandra"],
-    correctOptionIndex: 2,
-  },
-  {
-    question: "What is the purpose of the 'async' keyword in JavaScript?",
-    options: [
-      "To define an asynchronous function",
-      "To define a synchronous function",
-      "To pause the execution of a function",
-      "To stop the execution of a function",
-    ],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a Python web framework?",
-    options: ["Laravel", "Django", "Spring", "Rails"],
-    correctOptionIndex: 1,
-  },
-  {
-    question: "What is the file extension for Python files?",
-    options: [".py", ".js", ".java", ".php"],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a package manager for JavaScript?",
-    options: ["pip", "npm", "composer", "gem"],
-    correctOptionIndex: 1,
-  },
-  {
-    question: "Which language is primarily used for iOS app development?",
-    options: ["Java", "Swift", "Kotlin", "C#"],
-    correctOptionIndex: 1,
-  },
-  {
-    question: "What does JSON stand for?",
-    options: [
-      "JavaScript Object Notation",
-      "JavaScript Online Notation",
-      "JavaScript Object Network",
-      "JavaScript Online Network",
-    ],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a static site generator?",
-    options: ["WordPress", "Jekyll", "Drupal", "Magento"],
-    correctOptionIndex: 1,
-  },
-  {
-    question: "Which of the following is a build tool for Java?",
-    options: ["Maven", "Gradle", "Ant", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "What is the main purpose of Docker?",
-    options: [
-      "To manage databases",
-      "To create virtual machines",
-      "To containerize applications",
-      "To monitor applications",
-    ],
-    correctOptionIndex: 2,
-  },
-  {
-    question: "Which of the following is a front-end framework?",
-    options: ["Laravel", "Express", "Vue.js", "Django"],
-    correctOptionIndex: 2,
-  },
-  {
-    question: "What is the default port for HTTPS?",
-    options: ["80", "443", "21", "22"],
-    correctOptionIndex: 1,
-  },
-  {
-    question: "Which of the following is a JavaScript testing framework?",
-    options: ["JUnit", "RSpec", "Mocha", "JUnit"],
-    correctOptionIndex: 2,
-  },
-  {
-    question: "What does REST stand for?",
-    options: [
-      "Representational State Transfer",
-      "Representational State Transition",
-      "Representational State Transaction",
-      "Representational State Transport",
-    ],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a CSS preprocessor?",
-    options: ["Sass", "Less", "Stylus", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "Which of the following is a JavaScript package manager?",
-    options: ["npm", "pip", "gem", "composer"],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a popular JavaScript library?",
-    options: ["React", "Django", "Flask", "Laravel"],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "What is the purpose of the 'await' keyword in JavaScript?",
-    options: [
-      "To pause the execution of an async function",
-      "To define an asynchronous function",
-      "To stop the execution of a function",
-      "To define a synchronous function",
-    ],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a Python package manager?",
-    options: ["npm", "pip", "gem", "composer"],
-    correctOptionIndex: 1,
-  },
-  {
-    question: "Which of the following is a JavaScript framework?",
-    options: ["Angular", "Django", "Flask", "Laravel"],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a JavaScript module bundler?",
-    options: ["Webpack", "Gulp", "Grunt", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "What is the purpose of the 'super' keyword in JavaScript?",
-    options: [
-      "To call the constructor of the parent class",
-      "To create a new object",
-      "To access the global object",
-      "To define a new class",
-    ],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a JavaScript testing library?",
-    options: ["Jest", "JUnit", "RSpec", "Mocha"],
-    correctOptionIndex: 0,
-  },
-  {
-    question: "Which of the following is a JavaScript build tool?",
-    options: ["Maven", "Gradle", "Webpack", "Ant"],
-    correctOptionIndex: 2,
-  },
-  {
-    question: "Which of the following is a JavaScript linter?",
-    options: ["ESLint", "JSLint", "TSLint", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "Which of the following is a JavaScript transpiler?",
-    options: ["Babel", "TypeScript", "CoffeeScript", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "Which of the following is a JavaScript task runner?",
-    options: ["Gulp", "Grunt", "Webpack", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question:
-      "Which of the following is a JavaScript framework for building mobile apps?",
-    options: ["React Native", "Ionic", "NativeScript", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "Which of the following is a JavaScript testing framework?",
-    options: ["Jest", "Mocha", "Jasmine", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "Which of the following is a JavaScript build tool?",
-    options: ["Webpack", "Parcel", "Rollup", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "Which of the following is a JavaScript linter?",
-    options: ["ESLint", "JSLint", "TSLint", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "Which of the following is a JavaScript transpiler?",
-    options: ["Babel", "TypeScript", "CoffeeScript", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question: "Which of the following is a JavaScript task runner?",
-    options: ["Gulp", "Grunt", "Webpack", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question:
-      "Which of the following is a JavaScript framework for building mobile apps?",
-    options: ["React Native", "Ionic", "NativeScript", "All of the above"],
-    correctOptionIndex: 3,
-  },
-  {
-    question:
-      "Which of the following is a JavaScript library for building user interfaces?",
-    options: ["React", "Vue", "Angular", "All of the above"],
-    correctOptionIndex: 3,
+    category: "JavaScript"
   },
   {
     question: "What is the purpose of the 'let' keyword in JavaScript?",
-    options: [
-      "To declare a block-scoped variable",
-      "To declare a global variable",
-      "To declare a constant variable",
-      "To declare a function",
-    ],
+    options: ["To declare a variable that is block-scoped", "To declare a constant variable", "To declare a variable that is function-scoped", "To declare a global variable"],
     correctOptionIndex: 0,
+    category: "JavaScript"
   },
   {
-    question:
-      "Which of the following is a JavaScript framework for server-side development?",
-    options: ["Express", "Django", "Flask", "Rails"],
+    question: "Which method is used to convert a JSON string into a JavaScript object?",
+    options: ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "JSON.object()"],
     correctOptionIndex: 0,
+    category: "JavaScript"
   },
   {
-    question: "What is the purpose of the 'const' keyword in JavaScript?",
-    options: [
-      "To declare a block-scoped constant",
-      "To declare a block-scoped variable",
-      "To declare a global constant",
-      "To declare a global variable",
-    ],
+    question: "What will be the output of console.log(typeof null)?",
+    options: ["'object'", "'null'", "'undefined'", "'number'"],
     correctOptionIndex: 0,
+    category: "JavaScript"
   },
+  {
+    question: "What is the purpose of the 'map()' method in JavaScript?",
+    options: ["To create a new array by applying a function to each element", "To filter elements from an array", "To reduce an array to a single value", "To iterate over an array"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  },
+  {
+    question: "Which of the following is a valid way to create an object in JavaScript?",
+    options: ["var obj = {}", "var obj = new Object()", "var obj = Object.create()", "All of the above"],
+    correctOptionIndex: 3,
+    category: "JavaScript"
+  },
+  {
+    question: "What does 'this' refer to in a regular function?",
+    options: ["The global object", "The function itself", "The object that called the function", "None of the above"],
+    correctOptionIndex: 2,
+    category: "JavaScript"
+  },
+  {
+    question: "What is the output of the following code: console.log(0.1 + 0.2 === 0.3)?",
+    options: ["true", "false", "undefined", "Error"],
+    correctOptionIndex: 1,
+    category: "JavaScript"
+  },
+  {
+    question: "Which of the following is used to handle exceptions in JavaScript?",
+    options: ["try...catch", "throw", "finally", "All of the above"],
+    correctOptionIndex: 3,
+    category: "JavaScript"
+  },
+  {
+    question: "What is a closure in JavaScript?",
+    options: ["A function that is executed immediately", "A function that retains access to its lexical scope", "A function that has no parameters", "A function that returns another function"],
+    correctOptionIndex: 1,
+    category: "JavaScript"
+  },
+  {
+    question: "Which method is used to remove the last element from an array?",
+    options: ["pop()", "shift()", "slice()", "splice()"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  },
+  {
+    question: "What is the purpose of the 'filter()' method in JavaScript?",
+    options: ["To create a new array with elements that pass a test", "To create a new array with all elements", "To modify the original array", "To find an element in an array"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  },
+  {
+    question: "What is the use of the 'bind()' method in JavaScript?",
+    options: ["To create a new function with a specific 'this' value", "To call a function immediately", "To convert a function to a string", "To create a copy of an object"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  },
+  {
+    question: "Which of the following keywords is used to define a constant in JavaScript?",
+    options: ["const", "let", "var", "constant"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  },
+  {
+    question: "What is the output of the following code: console.log(typeof NaN)?",
+    options: ["'number'", "'NaN'", "'undefined'", "'string'"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  },
+  {
+    question: "Which of the following is a JavaScript framework?",
+    options: ["React", "Django", "Flask", "Ruby on Rails"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  },
+  {
+    question: "What does the 'async' keyword do in JavaScript?",
+    options: ["Makes a function return a promise", "Makes a function execute synchronously", "Makes a function execute in parallel", "None of the above"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  },
+  {
+    question: "What is the purpose of the 'reduce()' method in JavaScript?",
+    options: ["To execute a reducer function on each element", "To create a new array", "To iterate over an array", "To filter elements"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  },
+  {
+    question: "What does 'localStorage' do in JavaScript?",
+    options: ["Stores data for the duration of the page session", "Stores data with no expiration time", "Stores data temporarily", "Stores data in cookies"],
+    correctOptionIndex: 1,
+    category: "JavaScript"
+  },
+  {
+    question: "Which of the following is true about promises in JavaScript?",
+    options: ["They are used for handling asynchronous operations", "They can only be resolved, not rejected", "They are synchronous by nature", "They can only be created using the 'Promise' constructor"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  },
+  {
+    question: "What is the output of the following code: console.log(1 + '2' + '3')?",
+    options: ["123", "6", "15", "Error"],
+    correctOptionIndex: 0,
+    category: "JavaScript"
+  }
 ];
+const pythonQuestions = [
+  {
+    question: "What is the output of the following code: print(type([]))?",
+    options: ["<class 'list'>", "<class 'dict'>", "<class 'tuple'>", "<class 'set'>"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "Which of the following is a mutable data type in Python?",
+    options: ["Tuple", "String", "List", "Integer"],
+    correctOptionIndex: 2,
+    category: "Python"
+  },
+  {
+    question: "What is the keyword used to define a function in Python?",
+    options: ["function", "def", "func", "define"],
+    correctOptionIndex: 1,
+    category: "Python"
+  },
+  {
+    question: "How do you insert an element at a specific index in a list?",
+    options: ["list.add(index, element)", "list.insert(index, element)", "list.append(index, element)", "list.put(index, element)"],
+    correctOptionIndex: 1,
+    category: "Python"
+  },
+  {
+    question: "What is the output of the following code: print(3 * 'ab')?",
+    options: ["ababab", "3ab", "ab3", "Error"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "Which of the following is used to handle exceptions in Python?",
+    options: ["try...catch", "catch...finally", "try...except", "finally...except"],
+    correctOptionIndex: 2,
+    category: "Python"
+  },
+  {
+    question: "What is the correct way to create a dictionary in Python?",
+    options: ["dict = {}", "dict = []", "dict = ()", "dict = < >"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "What does the 'len()' function do in Python?",
+    options: ["Returns the length of an object", "Returns the type of an object", "Returns the sum of an object", "Returns the maximum of an object"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "Which of the following is not a valid way to create a comment in Python?",
+    options: ["# This is a comment", "\"\"\" This is a comment \"\"\"", "// This is a comment", "' This is a comment"],
+    correctOptionIndex: 2,
+    category: "Python"
+  },
+  {
+    question: "What is the output of the following code: print(2 ** 3)?",
+    options: ["6", "8", "9", "Error"],
+    correctOptionIndex: 1,
+    category: "Python"
+  },
+  {
+    question: "Which of the following is used to read a file in Python?",
+    options: ["open('file.txt')", "read('file.txt')", "file.read()", "get('file.txt')"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "What is the default return value of a function in Python if no return statement is provided?",
+    options: ["None", "0", "False", "undefined"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "Which of the following is a Python web framework?",
+    options: ["Django", "Flask", "FastAPI", "All of the above"],
+    correctOptionIndex: 3,
+    category: "Python"
+  },
+  {
+    question: "What is the purpose of the 'self' keyword in Python?",
+    options: ["To refer to the instance of the class", "To refer to the class itself", "To refer to global variables", "None of the above"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "What is the output of the following code: print('Hello ' + 'World!')?",
+    options: ["Hello World!", "HelloWorld!", "Hello World", "Error"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "What is the correct way to create a tuple in Python?",
+    options: ["tuple = {}", "tuple = []", "tuple = ()", "tuple = <>"],
+    correctOptionIndex: 2,
+    category: "Python"
+  },
+  {
+    question: "Which of the following methods can be used to convert a string to an integer in Python?",
+    options: ["int()", "str()", "float()", "convert()"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "What does the 'strip()' method do in Python?",
+    options: ["Removes whitespace from the beginning and end of a string", "Removes all whitespace from a string", "Removes punctuation from a string", "None of the above"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "Which of the following is a valid way to define a class in Python?",
+    options: ["class MyClass:", "MyClass class:", "class MyClass[]:", "class: MyClass"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "What is the output of the following code: print(5 // 2)?",
+    options: ["2", "2.5", "3", "Error"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "Which of the following is used to create a virtual environment in Python?",
+    options: ["virtualenv", "venv", "pip", "All of the above"],
+    correctOptionIndex: 3,
+    category: "Python"
+  },
+  {
+    question: "What is the purpose of the 'with' statement in Python?",
+    options: ["To handle exceptions", "To manage resources", "To create a new thread", "None of the above"],
+    correctOptionIndex: 1,
+    category: "Python"
+  },
+  {
+    question: "What will be the output of the following code: print([1, 2, 3] * 2)?",
+    options: ["[1, 2, 3, 1, 2, 3]", "[2, 4, 6]", "[1, 2, 3, 2, 4, 6]", "Error"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "How do you create a set in Python?",
+    options: ["set = {}", "set = []", "set = ()", "set = set()"],
+    correctOptionIndex: 3,
+    category: "Python"
+  },
+  {
+    question: "Which of the following is the correct way to import a module in Python?",
+    options: ["import module", "import module as alias", "from module import function", "All of the above"],
+    correctOptionIndex: 3,
+    category: "Python"
+  },
+  {
+    question: "What is the output of the following code: print(1 == 1 == 1)?",
+    options: ["True", "False", "1", "Error"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "Which of the following is the correct syntax for a list comprehension?",
+    options: ["[x for x in iterable]", "[x in iterable]", "[for x in iterable]", "[x: iterable]"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "What is the purpose of the 'pass' statement in Python?",
+    options: ["To indicate a no-operation", "To exit a loop", "To skip an iteration", "None of the above"],
+    correctOptionIndex: 0,
+    category: "Python"
+  },
+  {
+    question: "What is the output of the following code: print('abc'.upper())?",
+    options: ["ABC", "abc", "Abc", "Error"],
+    correctOptionIndex: 0,
+    category: "Python"
+  }
+];
+
+const reactQuestions = [
+  {
+    question: "What is React primarily used for?",
+    options: ["Building user interfaces", "Server-side scripting", "Database management", "Network programming"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of JSX in React?",
+    options: ["To allow HTML-like syntax in JavaScript", "To style components", "To manage state", "To handle events"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "Which method is called to update the state in a React component?",
+    options: ["setState()", "updateState()", "changeState()", "modifyState()"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is a component in React?",
+    options: ["A function or class that returns a React element", "A CSS file", "A JavaScript library", "A server-side script"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What does the 'useState' hook do?",
+    options: ["Manages state in functional components", "Fetches data from an API", "Handles side effects", "Renders components"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'useEffect' hook?",
+    options: ["To perform side effects in function components", "To manage local state", "To handle routing", "To create context"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the correct way to pass data from a parent component to a child component?",
+    options: ["Using props", "Using state", "Using context", "Using hooks"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of 'props' in React?",
+    options: ["To pass data and event handlers to child components", "To manage state", "To define styles", "To create components"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the default export of a React component?",
+    options: ["The component function or class", "The CSS styles", "The props", "The state"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'key' prop in React?",
+    options: ["To uniquely identify elements in a list", "To manage state", "To fetch data", "To handle events"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'React.Fragment' component?",
+    options: ["To group multiple elements without adding extra nodes to the DOM", "To manage state", "To handle routing", "To create forms"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What does 'lifting state up' mean in React?",
+    options: ["Moving state to a common ancestor component", "Using global state management", "Using local state", "Using props"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "Which lifecycle method is called after a component is mounted?",
+    options: ["componentDidMount()", "componentWillMount()", "componentDidUpdate()", "render()"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'useContext' hook?",
+    options: ["To access context values in functional components", "To manage state", "To handle side effects", "To fetch data"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'useReducer' hook?",
+    options: ["To manage complex state logic in functional components", "To fetch data", "To handle side effects", "To create context"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'React.StrictMode' component?",
+    options: ["To highlight potential problems in an application", "To manage state", "To handle routing", "To create forms"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the difference between a class component and a functional component?",
+    options: ["Class components can manage state and lifecycle methods, while functional components cannot", "Functional components are more performant than class components", "Class components are deprecated", "There is no difference"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'React Router' library?",
+    options: ["To handle routing in React applications", "To manage state", "To fetch data", "To create forms"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'useMemo' hook?",
+    options: ["To memoize expensive calculations", "To manage state", "To handle side effects", "To create context"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the output of the following code: <MyComponent />?",
+    options: ["A rendered component", "An error", "Nothing", "A string"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'useRef' hook?",
+    options: ["To create mutable references to DOM elements", "To manage state", "To handle side effects", "To create context"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'React.memo' function?",
+    options: ["To optimize functional components by memoizing their output", "To manage state", "To handle side effects", "To create context"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'useLayoutEffect' hook?",
+    options: ["To perform side effects synchronously after all DOM mutations", "To manage state", "To handle asynchronous effects", "To create context"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the output of the following code: console.log(<MyComponent />)?",
+    options: ["A React element", "An error", "A string", "Nothing"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "How do you handle events in React?",
+    options: ["Using camelCase syntax", "Using lowercase syntax", "Using HTML attributes", "Using jQuery"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the output of the following code: console.log(this)?",
+    options: ["The global object", "undefined", "An error", "The current component"],
+    correctOptionIndex: 0,
+    category: "React"
+  },
+  {
+    question: "What is the purpose of the 'useImperativeHandle' hook?",
+    options: ["To customize the instance value that is exposed when using ref", "To manage state", "To handle side effects", "To create context"],
+    correctOptionIndex: 0,
+    category: "React"
+  }
+];
+
+const flaskQuestions = [
+  {
+    question: "What is Flask?",
+    options: ["A web framework for Python", "A database management system", "A front-end library", "A JavaScript framework"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What command is used to create a new Flask application?",
+    options: ["flask create", "flask new", "flask run", "flask app"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "Which of the following is the default port for a Flask application?",
+    options: ["5000", "8000", "3000", "80"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What is the purpose of the 'render_template' function in Flask?",
+    options: ["To render HTML templates", "To handle form submissions", "To manage database connections", "To create routes"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "How do you define a route in Flask?",
+    options: ["@app.route('/path')", "app.route('/path')", "route('/path')", "define('/path')"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What is the purpose of the 'Flask-SQLAlchemy' extension?",
+    options: ["To integrate SQLAlchemy with Flask", "To handle form validation", "To manage user authentication", "To create REST APIs"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "Which method is used to handle GET requests in Flask?",
+    options: ["@app.get()", "@app.route()", "@app.post()", "@app.request()"],
+    correctOptionIndex: 1,
+    category: "Flask"
+  },
+  {
+    question: "What is the purpose of the 'flask run' command?",
+    options: ["To start the Flask development server", "To create a new Flask application", "To install Flask", "To run tests"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "How do you access form data in Flask?",
+    options: ["request.form", "request.data", "request.args", "request.json"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What is the purpose of the 'flash' function in Flask?",
+    options: ["To display messages to users", "To handle redirects", "To manage sessions", "To create routes"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What is a Flask blueprint?",
+    options: ["A way to organize routes and handlers", "A database schema", "A front-end template", "A configuration file"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "How do you create a static file directory in a Flask application?",
+    options: ["Create a 'static' folder", "Create a 'public' folder", "Create a 'assets' folder", "Create a 'files' folder"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What is the purpose of the 'request' object in Flask?",
+    options: ["To handle incoming requests", "To send responses", "To manage sessions", "To create routes"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "Which of the following is used to manage user sessions in Flask?",
+    options: ["Flask-Login", "Flask-Security", "Flask-SQLAlchemy", "Flask-WTF"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What is the purpose of the 'abort' function in Flask?",
+    options: ["To raise an HTTP error", "To terminate the application", "To redirect users", "To log requests"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "How do you serve static files in Flask?",
+    options: ["By placing them in the 'static' folder", "By using the 'send_file' function", "By using the 'send_from_directory' function", "By configuring routes"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What is the purpose of the 'url_for' function in Flask?",
+    options: ["To generate URLs for routes", "To handle redirects", "To manage sessions", "To create templates"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "Which of the following is a valid way to return a JSON response in Flask?",
+    options: ["return jsonify(data)", "return json(data)", "return response(data)", "return json_response(data)"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What is the purpose of the 'session' object in Flask?",
+    options: ["To store user-specific data across requests", "To manage routes", "To handle database connections", "To create templates"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What is Flask-WTF used for?",
+    options: ["Form handling and validation", "Database management", "User authentication", "File uploads"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "How do you configure a Flask application?",
+    options: ["By using a config dictionary", "By using environment variables", "By using a config file", "All of the above"],
+    correctOptionIndex: 3,
+    category: "Flask"
+  },
+  {
+    question: "What is the purpose of the 'after_request' decorator in Flask?",
+    options: ["To execute a function after a request is processed", "To handle errors", "To manage sessions", "To create routes"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "How do you handle file uploads in Flask?",
+    options: ["Using request.files", "Using request.data", "Using request.form", "Using request.json"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What does the 'debug' mode do in Flask?",
+    options: ["Provides detailed error messages and auto-reloads the server", "Increases performance", "Disables error messages", "Enables caching"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "How do you run tests in a Flask application?",
+    options: ["Using the unittest module", "Using the pytest framework", "Using the Flask testing client", "All of the above"],
+    correctOptionIndex: 3,
+    category: "Flask"
+  },
+  {
+    question: "What is the purpose of the 'before_request' decorator in Flask?",
+    options: ["To execute a function before a request is processed", "To handle errors", "To manage sessions", "To create routes"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  },
+  {
+    question: "What is the output of the following code: @app.route('/')?",
+    options: ["Defines a route for the root URL", "Defines a route for the home page", "Defines a route for the index page", "None of the above"],
+    correctOptionIndex: 0,
+    category: "Flask"
+  }
+];
+const cssQuestions = [
+  {
+    question: "What does CSS stand for?",
+    options: ["Cascading Style Sheets", "Creative Style System", "Colorful Style Sheets", "Computer Style Sheets"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "Which property is used to change the background color of an element?",
+    options: ["color", "background-color", "bgcolor", "background"],
+    correctOptionIndex: 1,
+    category: "CSS"
+  },
+  {
+    question: "How do you select an element with the id 'header' in CSS?",
+    options: ["#header", ".header", "header", "*header"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "Which CSS property controls the text size?",
+    options: ["font-size", "text-size", "font-style", "text-style"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "What is the correct CSS syntax to change the font of an element?",
+    options: ["font-family: Arial;", "font: Arial;", "font-family: 'Arial';", "font: 'Arial';"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "How do you make a list that lists its items with squares?",
+    options: ["list-style-type: square;", "list: square;", "list-style: square;", "list-style-type: squares;"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "Which property is used to change the font of an element?",
+    options: ["font-family", "font-style", "text-font", "font-weight"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "What does the 'float' property do?",
+    options: ["It positions an element to the left or right", "It makes an element transparent", "It creates space around an element", "It changes the display type of an element"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "How do you create a flex container in CSS?",
+    options: ["display: flex;", "flex: container;", "display: box;", "flex-container: true;"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "Which property is used to add space between elements?",
+    options: ["margin", "padding", "spacing", "border"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "What is the default value of the 'position' property?",
+    options: ["static", "relative", "absolute", "fixed"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "How do you apply a CSS style to all <p> elements?",
+    options: ["p { }", "p[] { }", "p.all { }", "p.all() { }"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "What is the purpose of the 'z-index' property?",
+    options: ["To set the stack order of elements", "To set the position of an element", "To set the size of an element", "To set the opacity of an element"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "How do you center an element horizontally in CSS?",
+    options: ["margin: auto;", "text-align: center;", "align: center;", "center: true;"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "Which property is used to change the text color of an element?",
+    options: ["color", "text-color", "font-color", "background-color"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "What does the 'display' property do?",
+    options: ["Defines how an element is displayed", "Sets the position of an element", "Changes the visibility of an element", "None of the above"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "Which of the following is a valid CSS comment?",
+    options: ["// This is a comment", "/* This is a comment */", "<!-- This is a comment -->", "# This is a comment"],
+    correctOptionIndex: 1,
+    category: "CSS"
+  },
+  {
+    question: "What is the purpose of the 'opacity' property?",
+    options: ["To set the transparency level of an element", "To set the color of an element", "To set the size of an element", "To set the position of an element"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "How do you add a border to an element in CSS?",
+    options: ["border: 1px solid black;", "border: solid black 1px;", "border: black 1px solid;", "border: 1px black solid;"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "Which of the following is a CSS framework?",
+    options: ["Bootstrap", "React", "Vue", "Django"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "What does the 'overflow' property do?",
+    options: ["Specifies what happens if content overflows an element's box", "Sets the position of an element", "Changes the size of an element", "None of the above"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "How do you create a CSS grid layout?",
+    options: ["display: grid;", "grid: layout;", "display: flex;", "grid-layout: true;"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "Which property is used to control the spacing between letters in CSS?",
+    options: ["letter-spacing", "word-spacing", "text-spacing", "spacing"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "What is the purpose of the 'media queries' in CSS?",
+    options: ["To apply styles based on device characteristics", "To create animations", "To manage layout", "To define variables"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "How do you make text bold in CSS?",
+    options: ["font-weight: bold;", "font-style: bold;", "text-weight: bold;", "text-style: bold;"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "What is the purpose of the 'transition' property in CSS?",
+    options: ["To create smooth transitions between property changes", "To set the duration of animations", "To manage layout", "To define styles for hover effects"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "How do you hide an element in CSS?",
+    options: ["display: none;", "visibility: hidden;", "opacity: 0;", "All of the above"],
+    correctOptionIndex: 3,
+    category: "CSS"
+  },
+  {
+    question: "What does the 'position: relative;' property do?",
+    options: ["Positions an element relative to its normal position", "Positions an element fixed to the viewport", "Positions an element absolutely within its parent", "None of the above"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  },
+  {
+    question: "How do you apply a style to a class in CSS?",
+    options: [".className { }", "#className { }", "className { }", "class { }"],
+    correctOptionIndex: 0,
+    category: "CSS"
+  }
+];
+
+const htmlQuestions = [
+  {
+    question: "What does HTML stand for?",
+    options: ["HyperText Markup Language", "HighText Machine Language", "HyperText Markup Level", "None of the above"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which HTML tag is used to define an unordered list?",
+    options: ["<ul>", "<ol>", "<li>", "<list>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which attribute is used to specify the URL of an image in HTML?",
+    options: ["src", "href", "url", "link"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "What is the correct HTML element for inserting a line break?",
+    options: ["<break>", "<br>", "<lb>", "<linebreak>"],
+    correctOptionIndex: 1,
+    category: "HTML"
+  },
+  {
+    question: "Which HTML tag is used to create a hyperlink?",
+    options: ["<link>", "<a>", "<href>", "<url>"],
+    correctOptionIndex: 1,
+    category: "HTML"
+  },
+  {
+    question: "What is the purpose of the <head> tag in HTML?",
+    options: ["To contain metadata and links to scripts and styles", "To contain the main content of the page", "To define the footer of the page", "To create a navigation bar"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which HTML element is used to define the title of a document?",
+    options: ["<title>", "<head>", "<meta>", "<h1>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "What is the correct HTML for creating a checkbox?",
+    options: ["<input type='checkbox'>", "<checkbox>", "<input type='check'>", "<check>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which tag is used to define a table in HTML?",
+    options: ["<table>", "<tab>", "<tbody>", "<tr>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "What is the purpose of the <form> tag in HTML?",
+    options: ["To create a form for user input", "To define a section of the document", "To create a table", "To group elements"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which attribute is used to specify the destination URL of a link?",
+    options: ["src", "href", "link", "url"],
+    correctOptionIndex: 1,
+    category: "HTML"
+  },
+  {
+    question: "What is the correct HTML for creating a drop-down list?",
+    options: ["<select>", "<dropdown>", "<list>", "<option>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which HTML element is used to define an image?",
+    options: ["<img>", "<image>", "<src>", "<picture>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "What does the <meta> tag do in HTML?",
+    options: ["Defines metadata about the HTML document", "Creates a link", "Defines a table", "None of the above"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which tag is used to define a paragraph in HTML?",
+    options: ["<p>", "<para>", "<text>", "<paragraph>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "What is the purpose of the <div> tag in HTML?",
+    options: ["To define a division or section in a document", "To create a hyperlink", "To define a table", "To create a list"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which HTML tag is used to define an ordered list?",
+    options: ["<ol>", "<ul>", "<li>", "<list>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "What is the correct HTML for adding a comment?",
+    options: ["<!-- This is a comment -->", "// This is a comment", "<!-- This is a comment>", "<comment>This is a comment</comment>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which HTML element is used to define a footer for a document or section?",
+    options: ["<footer>", "<bottom>", "<section>", "<footer-section>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "What is the purpose of the <section> tag in HTML?",
+    options: ["To define a section in a document", "To create a navigation bar", "To define a footer", "To create a form"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which tag is used to define a header for a document or section?",
+    options: ["<header>", "<head>", "<top>", "<h1>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "What is the correct HTML for creating an email input field?",
+    options: ["<input type='email'>", "<email>", "<input type='mail'>", "<input type='text' type='email'>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which HTML tag is used to define a line break?",
+    options: ["<br>", "<break>", "<lb>", "<linebreak>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "What is the purpose of the <link> tag in HTML?",
+    options: ["To link external resources like stylesheets", "To create a hyperlink", "To define metadata", "To create a form"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "How do you create a text input field in HTML?",
+    options: ["<input type='text'>", "<textinput>", "<input text>", "<input type='string'>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which tag is used to create a horizontal line in HTML?",
+    options: ["<hr>", "<line>", "<hline>", "<horizontal>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "What is the correct HTML for creating a button?",
+    options: ["<button>", "<input type='button'>", "<btn>", "<input button>"],
+    correctOptionIndex: 1,
+    category: "HTML"
+  },
+  {
+    question: "Which HTML attribute specifies an alternate text for an image?",
+    options: ["alt", "src", "title", "text"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "What does the <iframe> tag do?",
+    options: ["Defines an inline frame", "Creates a hyperlink", "Defines a table", "Creates a list"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  },
+  {
+    question: "Which HTML element is used to define a navigation bar?",
+    options: ["<nav>", "<navbar>", "<navigation>", "<menu>"],
+    correctOptionIndex: 0,
+    category: "HTML"
+  }
+];
+const djangoQuestions = [
+  {
+    question: "What is Django?",
+    options: ["A web framework for Python", "A database management system", "A front-end library", "A JavaScript framework"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "Which command is used to create a new Django project?",
+    options: ["django-admin startproject", "django create project", "python manage.py startproject", "django new project"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is the purpose of the 'settings.py' file in Django?",
+    options: ["To configure the Django project settings", "To define URL patterns", "To create models", "To manage static files"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "Which command is used to run the Django development server?",
+    options: ["python manage.py runserver", "django runserver", "python runserver", "manage.py run"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is a Django app?",
+    options: ["A web application that does something specific", "A template for HTML pages", "A database model", "A static file"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "Which file is used to define URL patterns in Django?",
+    options: ["urls.py", "views.py", "models.py", "settings.py"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is the purpose of the 'migrate' command in Django?",
+    options: ["To apply database migrations", "To create a new app", "To run tests", "To start the server"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is the default database used by Django?",
+    options: ["SQLite", "PostgreSQL", "MySQL", "MongoDB"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "Which command is used to create a new Django app?",
+    options: ["python manage.py startapp", "django-admin createapp", "python manage.py createapp", "django startapp"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is a model in Django?",
+    options: ["A class that defines the structure of the database", "A view that renders templates", "A URL pattern", "A static file"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "Which method is used to render a template in a Django view?",
+    options: ["render()", "template()", "render_template()", "response()"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is the purpose of Django's admin interface?",
+    options: ["To manage application data", "To create views", "To define URL patterns", "To handle static files"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "How do you create a superuser in Django?",
+    options: ["python manage.py createsuperuser", "django-admin createuser", "python manage.py usercreate", "manage.py createsuperuser"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "Which file is used to define the database configuration in Django?",
+    options: ["settings.py", "urls.py", "models.py", "views.py"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is the purpose of Django middleware?",
+    options: ["To process requests and responses globally", "To define URL patterns", "To manage static files", "To create views"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is a queryset in Django?",
+    options: ["A collection of database queries", "A way to define models", "A method to render templates", "A URL pattern"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "Which command is used to create database migrations in Django?",
+    options: ["python manage.py makemigrations", "django-admin create-migrations", "python manage.py create-migrations", "manage.py makemigrations"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is the purpose of the 'admin.site.register()' method in Django?",
+    options: ["To register models with the admin interface", "To create views", "To define URL patterns", "To manage static files"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "How do you define a static file directory in Django?",
+    options: ["STATICFILES_DIRS in settings.py", "STATIC_DIR in settings.py", "STATICFILES in urls.py", "STATIC_DIR in urls.py"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is the purpose of the 'render_to_response()' function?",
+    options: ["To render a template and return an HTTP response", "To define URL patterns", "To create views", "To manage static files"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "Which of the following is a valid way to include static files in a Django template?",
+    options: ["{% load static %} <link rel='stylesheet' href='{% static 'css/style.css' %}'>", "<link rel='stylesheet' href='/static/css/style.css'>", "<link rel='stylesheet' href='static/css/style.css'>", "<link rel='stylesheet' href='css/style.css'>"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is the purpose of the 'get_object_or_404()' method?",
+    options: ["To retrieve an object from the database or return a 404 error", "To create a new object", "To update an object", "To delete an object"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "Which of the following is used to handle forms in Django?",
+    options: ["Django Forms", "Django Models", "Django Views", "Django Admin"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "How do you define a custom user model in Django?",
+    options: ["By extending AbstractUser or AbstractBaseUser", "By creating a new model", "By using the default user model", "By modifying the settings.py"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What does the 'urls.py' file do in a Django project?",
+    options: ["Defines URL patterns for the application", "Contains settings for the application", "Manages database connections", "Defines models"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "What is the purpose of the 'csrf_token' in Django forms?",
+    options: ["To prevent Cross-Site Request Forgery attacks", "To validate form data", "To manage user sessions", "To create views"],
+    correctOptionIndex: 0,
+    category: "Django"
+  },
+  {
+    question: "Which of the following commands is used to check for database migrations?",
+    options: ["python manage.py showmigrations", "django-admin checkmigrations", "python manage.py listmigrations", "manage.py checkmigrations"],
+    correctOptionIndex: 0,
+    category: "Django"
+  }
+];
+
+
+const expressQuestions = [
+  {
+    question: "What is Express.js?",
+    options: ["A web application framework for Node.js", "A database management system", "A front-end library", "A programming language"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "Which command is used to install Express.js?",
+    options: ["npm install express", "npm install express.js", "npm install -g express", "npm install express-framework"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "What method is used to create an Express application?",
+    options: ["express()", "createExpress()", "new Express()", "app()"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "Which method is used to define a route in Express?",
+    options: ["app.get()", "app.route()", "app.addRoute()", "app.listen()"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "How do you start the Express server?",
+    options: ["app.listen(port)", "server.start(port)", "express.listen(port)", "app.start(port)"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "What is middleware in Express?",
+    options: ["Functions that execute during the request-response cycle", "Database connection handlers", "HTML rendering functions", "Static file serving functions"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "Which method is used to serve static files in Express?",
+    options: ["express.static()", "app.static()", "static()", "serve.static()"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "How do you handle POST requests in Express?",
+    options: ["app.post()", "app.request()", "app.get()", "app.handle()"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "What is the purpose of the 'body-parser' middleware?",
+    options: ["To parse incoming request bodies", "To handle routing", "To serve static files", "To manage sessions"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "How do you define a query parameter in an Express route?",
+    options: [":param", "param()", "query:param", "req.param"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "Which method is used to redirect a request in Express?",
+    options: ["res.redirect()", "app.redirect()", "response.redirect()", "redirect()"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "What is the purpose of the 'express.Router()'?",
+    options: ["To create modular route handlers", "To create middleware", "To manage static files", "To connect to the database"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "How do you handle errors in Express?",
+    options: ["Using middleware with four parameters", "Using try-catch blocks", "Using res.error()", "Using app.error()"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "Which method is used to send a JSON response in Express?",
+    options: ["res.json()", "res.sendJson()", "res.JSON()", "send.json()"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "What does the 'app.use()' method do?",
+    options: ["Mounts middleware functions", "Defines routes", "Starts the server", "Sends responses"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "How do you access route parameters in Express?",
+    options: ["req.params", "req.body", "req.query", "req.route"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "Which method is used to set custom HTTP headers in Express?",
+    options: ["res.set()", "res.header()", "res.headers()", "setHeader()"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "What is the default port for an Express server?",
+    options: ["3000", "8080", "5000", "80"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "How do you handle CORS in Express?",
+    options: ["Using the 'cors' middleware", "Using app.cors()", "Using res.cors()", "CORS is not supported"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "What is the purpose of the 'express-session' middleware?",
+    options: ["To manage user sessions", "To handle routing", "To serve static files", "To parse request bodies"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "How do you create a custom middleware in Express?",
+    options: ["By defining a function with req, res, and next parameters", "By using app.middleware()", "By using res.middleware()", "By creating a new instance of middleware"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "What is the purpose of the 'next' function in middleware?",
+    options: ["To pass control to the next middleware function", "To end the request-response cycle", "To send a response", "To handle errors"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "How do you serve HTML files in Express?",
+    options: ["res.sendFile()", "res.sendHtml()", "res.html()", "send.html()"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "Which method is used to create a new Express application?",
+    options: ["express()", "new Express()", "createExpress()", "app()"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "How do you stop the Express server?",
+    options: ["Ctrl + C", "app.stop()", "server.stop()", "exit()"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "What is the purpose of the 'compression' middleware?",
+    options: ["To compress response bodies", "To handle routing", "To serve static files", "To manage sessions"],
+    correctOptionIndex: 0,
+    category: "Express"
+  },
+  {
+    question: "How do you set up a view engine in Express?",
+    options: ["app.set('view engine', 'ejs')", "app.use('view engine', 'ejs')", "app.view('ejs')", "setViewEngine('ejs')"],
+    correctOptionIndex: 0,
+    category: "Express"
+  }
+];
+
+
+
+
+const quizzes=[...JavaScriptquestion,...expressQuestions,...djangoQuestions,...htmlQuestions,...cssQuestions,...flaskQuestions,...pythonQuestions,...reactQuestions]
+
+
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));

@@ -8,27 +8,54 @@ export default function Starter({dispatch}) {
       <div className="starter">
         <h1>Start the Quiz</h1>
         <p>
-          Welcome to our exciting quiz challenge! This quiz is designed to test
-          your knowledge across a variety of topics. Whether you're a trivia
-          enthusiast or just looking to learn something new, this quiz is
-          perfect for you. Each question has been carefully crafted to challenge
-          your understanding and provide you with an opportunity to showcase
-          your skills.
+          Welcome to our thrilling coding challenge! This quiz is crafted to
+          test your programming knowledge across a variety of topics. Whether
+          you're a coding enthusiast or eager to expand your skills, this quiz
+          is perfect for you. Each question is designed to push your coding
+          understanding and give you a chance to showcase your abilities.
           <br />
           <br />
-          As you progress through the quiz, you'll encounter questions that
-          range from easy to difficult, covering subjects such as history,
-          science, literature, and more. Don't worry if you don't know all the
-          answers; this is a great chance to learn and expand your horizons.
+          As you progress through the quiz, you'll encounter questions that vary
+          in difficulty, covering subjects such as algorithms, data structures,
+          and software development concepts. Don't worry if you don't know every
+          answer; this is a fantastic opportunity to learn and enhance your
+          coding prowess.
           <br />
           <br />
-          Remember, the goal is not just to get a perfect score but to enjoy the
-          process and discover new information. So take a deep breath, relax,
-          and get ready to embark on this intellectual adventure. Click the
-          button below to start the quiz and see how much you really know. Good
-          luck, and have fun!
+          The aim is not just to achieve a perfect score, but to enjoy the
+          experience and gain new insights. So, take a deep breath, relax, and
+          get ready to embark on this coding journey. Click the button below to
+          start the quiz and put your coding skills to the test. Good luck, and
+          enjoy the challenge
         </p>
-        <button onClick={()=>dispatch({type:"startquiz"})} >Start Quiz</button>
+
+        <div className="categrydiv">
+          <p>
+            <strong> Select Categry</strong>
+          </p>
+          <select
+            name="categry"
+            id="categry"
+            className="categry"
+            onChange={(e) =>
+              dispatch({ type: "categry", payload: e.target.value })
+            }
+          >
+            <option value="JavaScript" selected>
+              JavaScript
+            </option>
+            <option value="Python">Python</option>
+            <option value="Flask">Flask</option>
+            <option value="CSS">CSS</option>
+            <option value="React">React</option>
+            <option value="HTML">HTML</option>
+            <option value="Django">Django</option>
+            <option value="Express">Express</option>
+          </select>
+        </div>
+        <button onClick={() => dispatch({ type: "startquiz" })}>
+          Start Quiz
+        </button>
       </div>
     </div>
   );
